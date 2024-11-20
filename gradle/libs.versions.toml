@@ -1,0 +1,111 @@
+[versions]
+
+# Global
+kotlin = "2.0.21"
+hilt = "2.52"
+
+# Plugins
+android = "8.7.2"
+ksp = "2.0.21-1.0.28"
+hilt-navigation-compose = "1.2.0"
+protobuf-plugin = "0.9.4"
+
+# Libraries
+compose-bom = "2024.11.00"
+compose-activity = "1.9.3"
+compose-lifecycle = "2.8.7"
+compose-navigation = "2.8.4"
+
+timber = "5.0.1"
+kotlinx-serialization = "1.7.3"
+datastore = "1.1.1"
+
+protobuf = "4.28.0"
+# This needs to be synced with protobuf
+protobufCompilerArtifact = "com.google.protobuf:protoc:4.28.0:osx-x86_64"
+
+ktor = "3.0.0"
+room = "2.6.1"
+
+junit = "5.11.3"
+mockk = "1.13.13"
+kotest-assertions = "5.9.1"
+coroutinesTest = "1.9.0"
+turbine = "1.2.0"
+
+[libraries]
+hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "hilt" }
+hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hilt" }
+hilt-navigation = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hilt-navigation-compose" }
+
+# https://developer.android.com/develop/ui/compose/bom/bom-mapping
+compose-bom = { module = "androidx.compose:compose-bom", version.ref = "compose-bom" }
+compose-tooling = { module = "androidx.compose.ui:ui-tooling" }
+compose-icons = { module = "androidx.compose.material:material-icons-extended" }
+compose-material = { module = "androidx.compose.material3:material3" }
+compose-activity = { module = "androidx.activity:activity-compose", version.ref = "compose-activity" }
+compose-lifecycle = { module = "androidx.lifecycle:lifecycle-runtime-compose", version.ref = "compose-lifecycle" }
+compose-viewmodel = { module = "androidx.lifecycle:lifecycle-viewmodel-compose", version.ref = "compose-lifecycle" }
+compose-navigation = { module = "androidx.navigation:navigation-compose", version.ref = "compose-navigation" }
+
+timber = { module = "com.jakewharton.timber:timber", version.ref = "timber" }
+
+datastore = { module = "androidx.datastore:datastore", version.ref = "datastore" }
+protobuf = { module = "com.google.protobuf:protobuf-javalite", version.ref = "protobuf" }
+datastore-preferences = { module = "androidx.datastore:datastore-preferences", version.ref = "datastore" }
+
+kotlinx-serialization = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinx-serialization" }
+
+ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktor" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktor" }
+ktor-client-auth = { module = "io.ktor:ktor-client-auth", version.ref = "ktor" }
+ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktor" }
+ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktor" }
+
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
+
+unitTest-junit = { module = "org.junit.jupiter:junit-jupiter", version.ref = "junit" }
+unitTest-mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
+unitTest-coroutines = { module = " org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "coroutinesTest" }
+unitTest-kotest-assertions = { module = "io.kotest:kotest-assertions-core", version.ref = "kotest-assertions" }
+unitTest-turbine = { module = "app.cash.turbine:turbine", version.ref = "turbine" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "android" }
+android-library = { id = "com.android.library", version.ref = "android" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+ksp = { id = "com.google.devtools.ksp", version.ref = "ksp" }
+hilt-android = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+protobuf = { id = "com.google.protobuf", version.ref = "protobuf-plugin" }
+
+[bundles]
+hilt = [
+    "hilt-android",
+    "hilt-android-compiler",
+]
+compose = [
+    "compose-activity",
+    "compose-material",
+    "compose-tooling",
+    "compose-lifecycle",
+    "compose-viewmodel",
+    "compose-icons",
+    "compose-navigation",
+]
+ktor = [
+    "ktor-client-core",
+    "ktor-client-cio",
+    "ktor-client-auth",
+    "ktor-client-content-negotiation",
+    "ktor-serialization-kotlinx-json",
+]
+unitTest = [
+    "unitTest-junit",
+    "unitTest-mockk",
+    "unitTest-kotest-assertions",
+    "unitTest-coroutines",
+    "unitTest-turbine",
+]
