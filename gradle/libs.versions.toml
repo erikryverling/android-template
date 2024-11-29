@@ -1,7 +1,7 @@
 [versions]
 
 # Global
-kotlin = "2.0.21"
+kotlin = "2.1.0"
 hilt = "2.52"
 
 # Plugins
@@ -20,11 +20,11 @@ timber = "5.0.1"
 kotlinx-serialization = "1.7.3"
 datastore = "1.1.1"
 
-protobuf = "4.28.0"
+protobuf = "4.28.3"
 # This needs to be synced with protobuf
 protobufCompilerArtifact = "com.google.protobuf:protoc:4.28.0:osx-x86_64"
 
-ktor = "3.0.0"
+ktor = "3.0.1"
 room = "2.6.1"
 
 junit = "5.11.3"
