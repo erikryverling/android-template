@@ -1,4 +1,4 @@
-rootProject.name = "Template"
+rootProject.name = "Android Template"
 rootProject.buildFileName = "build.gradle.kts"
 
 include(
