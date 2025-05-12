@@ -1,9 +1,4 @@
-rootProject.name = "Android Template"
-rootProject.buildFileName = "build.gradle.kts"
-
-include(
-    ":app",
-)
+rootProject.name = "android-template"
 
 pluginManagement {
     repositories {
@@ -12,3 +7,7 @@ pluginManagement {
         mavenCentral()
     }
 }
+
+include(
+    ":app"
+)

@@ -38,6 +38,7 @@ android {
         compose = true
     }
 
+    @Suppress("UnstableApiUsage")
     testOptions {
         unitTests.all {
             it.useJUnitPlatform()
