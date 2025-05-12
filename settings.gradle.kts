@@ -2,7 +2,7 @@ rootProject.name = "Android Template"
 rootProject.buildFileName = "build.gradle.kts"
 
 include(
-    ":app"
+    ":app",
 )
 
 pluginManagement {
