@@ -19,6 +19,7 @@ android {
 
     defaultConfig {
         applicationId = "se.yverling.template"
+        targetSdk = 36
         minSdk = 26
         versionCode = 1
         versionName = "1.0.0"
