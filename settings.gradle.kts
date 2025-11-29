@@ -2,9 +2,9 @@ rootProject.name = "android-template"
 
 pluginManagement {
     repositories {
-        gradlePluginPortal()
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
 }
 
