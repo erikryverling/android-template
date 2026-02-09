@@ -16,4 +16,3 @@ description: Upgrades the project dependencies
 - Summerize all changes in libs.versions.toml and gradle-wrapper.properties and let me approve them
 - When approved create a commit for the changes named "Bump dependencies"
 - Push the changes
-- Exit
