@@ -16,11 +16,11 @@ dependencies {
 
 android {
     namespace = "se.yverling.template"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "se.yverling.template"
-        targetSdk = 36
+        targetSdk = 37
         minSdk = 26
         versionCode = 1
         versionName = "1.0.0"
