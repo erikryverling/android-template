@@ -13,14 +13,19 @@ description: Updates the project dependencies
 # 2. Update dependencies
 - Update all dependencies in `libs.versions.toml` and `gradle-wrapper.properties`
 - Always prefer stable version of dependencies, if possible
-   - Prioritize `rc` over `beta` and `alpha`
+    - Prioritize `rc` over `beta` and `alpha`
 - If Gradle fails to resolve newly released versions that are confirmed to exist, use the `--refresh-dependencies` flag (e.g., `./gradlew assembleDebug --refresh-dependencies`)
 - Add comments to `libs.versions.toml` and `gradle-wrapper.properties` on the versions you decide not to update with an explanation why (usually due to compatibility issues)
 
 # 3. Verify updates
 1. Run `./gradlew assembleDebug` and fix any compilation errors
 2. Run all tests with `./gradlew test`. Fix any issues caused by failing tests. Never change the tests
-   themself.
+   themselves.
+3. Verify app start(s)
+    1. Start the Pixel_9_Pro_API_36 Android emulator
+    2. Build the app with ./gradlew assembleDebug
+    3. Install the build APK with adb install
+    4. Verify the app is running and doesn't crash
 
 # 4. Verify that all potential version updates have been addressed
 Verify that all versions in `libs.versions.toml` and `gradle-wrapper.properties` that have a newer version available
