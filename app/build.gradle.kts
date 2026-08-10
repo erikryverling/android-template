@@ -16,25 +16,24 @@ dependencies {
 
 android {
     namespace = "se.yverling.template"
-    compileSdk = 36
+    compileSdk = 37
 
     defaultConfig {
         applicationId = "se.yverling.template"
-        targetSdk = 36
+        targetSdk = 37
         minSdk = 26
         versionCode = 1
         versionName = "1.0.0"
     }
 
     compileOptions {
-        // KSP only supports Java 17
-        sourceCompatibility(JavaVersion.VERSION_17)
-        targetCompatibility(JavaVersion.VERSION_17)
+        sourceCompatibility(JavaVersion.VERSION_21)
+        targetCompatibility(JavaVersion.VERSION_21)
     }
 
     kotlin {
         compilerOptions {
-            jvmTarget = JvmTarget.JVM_17
+            jvmTarget = JvmTarget.JVM_21
         }
     }
 
